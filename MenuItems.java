@@ -14,8 +14,8 @@ public class MenuItems {
     // Parameterised Constructor
     public MenuItems(String name, int purchases, double price) {
         this.name = name;
-        this.purchases = 0;
-        this.price = 0.0;
+        this.purchases = purchases;
+        this.price = price;
     }
 
     // Setters
