@@ -53,6 +53,10 @@ public class CafeteriaMenuAnalysis {
                 maxPurchases = purchases[i];
                 mostPopularItem = i + 1;
             }
+            if (purchases[i] < minPurchases) {
+                minPurchases = purchases[i];
+                leastPopularItem = i + 1;
+            }
         }
 
         // 3️⃣ CALCULATIONS
