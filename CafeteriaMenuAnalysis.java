@@ -38,12 +38,28 @@ public class CafeteriaMenuAnalysis {
             totalPurchases += purchase;
         }
 
-
-
-
-
         // 2️⃣ PROCSSING SECTION
+        // Calculate the average number of purchases
+        double averagePurchases = (double) totalPurchases / numMenuItems;
+        
+        // Determine the most and least popular items
+        int maxPurchases = purchases[0];
+        int minPurchases = purchases[0];
+        int mostPopularItem = 1;
+        int leastPopularItem = 1;
+
+        for (int i= 1; i < numMenuItems; i++) {
+            if (purchases[i] > maxPurchases) {
+                maxPurchases = purchases[i];
+                mostPopularItem = i + 1;
+            }
+        }
+
         // 3️⃣ CALCULATIONS
+
+        
+    
+
         // 4️⃣ OUTPUT
 
 
