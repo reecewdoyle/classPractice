@@ -56,8 +56,16 @@ public class CafeteriaMenuAnalysis {
         }
 
         // 3️⃣ CALCULATIONS
+        // Determine the demand level
+        String demandLevel;
+        if (averagePurchases <= 20) {
+            demandLevel = "Low Demand";
+        } else if (averagePurchases <= 50) {
+            demandLevel = "Moderate Demand";
+        } else {
+            demandLevel = "High Demand";
+        }
 
-        
     
 
         // 4️⃣ OUTPUT
