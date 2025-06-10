@@ -65,7 +65,7 @@ public class CafeteriaMenuAnalysis {
         int minPurchases = purchases[0];
         int mostPopularItem = 1;
         int leastPopularItem = 1;
-
+        
         for (int i= 1; i < numMenuItems; i++) {
             if (purchases[i] > maxPurchases) {
                 maxPurchases = purchases[i];
@@ -75,6 +75,14 @@ public class CafeteriaMenuAnalysis {
                 minPurchases = purchases[i];
                 leastPopularItem = i + 1;
             }
+        }
+
+        // Determine the total price
+        double totalBill = 0.0;
+
+        for (int i = 0; i < numMenuItems; i++) {
+            double itemCost = menuItems[i].getPurchases() * menuItems[i].getPrice();
+            totalBill += itemCost;
         }
 
         // 3️⃣ CALCULATIONS
@@ -88,12 +96,34 @@ public class CafeteriaMenuAnalysis {
             demandLevel = "High Demand";
         }
 
+        // Create subtotals for each item
+        double[] subtotals = new double[numMenuItems];
+
+        for (int i=0; i < numMenuItems; i++) {
+            subtotals[i] = menuItems[i].getPurchases() * menuItems[i].getPrice();
+        }
+
+        String itemSubtotalsOutput = "------ Item Subtotals ------\n";
+
+        for (int i = 0; i < numMenuItems; i++) {
+            itemSubtotalsOutput += menuItems[i].getName() + " - " + 
+                                menuItems[i].getPurchases() + " x $" + 
+                                String.format("%.2f", menuItems[i].getPrice()) + " = $" + 
+                                String.format("%.2f", subtotals[i]) + "\n";
+        } 
+
         // 4️⃣ OUTPUT
         // Output the results
         System.out.println("Average purchases = " + averagePurchases);
         System.out.println("Most popular item  = Item " + mostPopularItem);
         System.out.println("Least popular item  = Item " + leastPopularItem);
         System.out.println("Demand is " + demandLevel);
+        System.out.println("Total cafeteria bill = $" + String.format("%.2f", totalBill));
+        System.out.println(itemSubtotalsOutput);
+
+
+        
+        
 
         scanner.close();
 
