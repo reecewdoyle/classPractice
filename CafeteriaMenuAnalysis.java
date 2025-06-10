@@ -75,7 +75,7 @@ public class CafeteriaMenuAnalysis {
         System.out.println("Average purchases = " + averagePurchases);
         System.out.println("Most popular item  = Item " + mostPopularItem);
         System.out.println("Least popular item  = Item " + leastPopularItem);
-        System.out.println("Femand is " + demandLevel);
+        System.out.println("Demand is " + demandLevel);
 
         scanner.close();
 
