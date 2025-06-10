@@ -17,6 +17,7 @@ public class CafeteriaMenuAnalysis {
             }
         } while (numMenuItems <= 0);
 
+        // Creates an Array that is set to be the length of what the user entered for number of items.
         int[] purchases = new int [numMenuItems];
         int totalPurchases = 0;
 
