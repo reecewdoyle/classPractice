@@ -10,36 +10,29 @@ public class MenuItems {
         this.purchases = 0;
         this.price = 0.0;
     }
-
     // Parameterised Constructor
     public MenuItems(String name, int purchases, double price) {
         this.name = name;
         this.purchases = purchases;
         this.price = price;
     }
-
     // Setters
     public void setName(String name) {
         this.name = name;
     }
-
     public void setPurchases(int purchases) {
         this.purchases = purchases;
     }
-
     public void setPrice(double price) {
         this.price = price;
     }
-
     // Getters
     public String getName() {
         return name;
     }
-
     public int getPurchases() {
         return purchases;
     }
-
     public double getPrice() {
         return price;
     }

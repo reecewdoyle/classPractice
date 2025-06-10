@@ -5,7 +5,7 @@ public class CafeteriaMenuAnalysis {
     public static void main (String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // 1️⃣ INPUT SECTION
+        // 1 INPUT SECTION
         // Input the number of items
         int numMenuItems = 0;
         // Do...while loop for validation
@@ -54,7 +54,7 @@ public class CafeteriaMenuAnalysis {
             totalPurchases += purchase;
         }
 
-        // 2️⃣ PROCSSING SECTION
+        // 2 PROCSSING SECTION
         // Calculate the average number of purchases
         double averagePurchases = (double) totalPurchases / numMenuItems;
         
@@ -83,7 +83,7 @@ public class CafeteriaMenuAnalysis {
             totalBill += itemCost;
         }
 
-        // 3️⃣ CALCULATIONS
+        // 3 CALCULATIONS
         // Determine the demand level
         String demandLevel;
         if (averagePurchases <= 20) {
@@ -110,7 +110,7 @@ public class CafeteriaMenuAnalysis {
                                 String.format("%.2f", subtotals[i]) + "\n";
         } 
 
-        // 4️⃣ OUTPUT
+        // 4 OUTPUT
         // Output the results
         System.out.println("Average purchases = " + averagePurchases);
         System.out.println("Most popular item  = Item " + mostPopularItem);
