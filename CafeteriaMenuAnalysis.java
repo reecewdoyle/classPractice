@@ -19,11 +19,21 @@ public class CafeteriaMenuAnalysis {
 
         // Creates an Array that is set to be the length of what the user entered for number of items.
         int[] purchases = new int [numMenuItems];
+        MenuItems[] menuItems = new MenuItems[numMenuItems];
         int totalPurchases = 0;
+
+        
 
         // Input the number of purchases for each menu item
         // Loop through menu items
         for (int i = 0; i < numMenuItems; i++) {
+
+            // Clear scanner buffer before reading String
+            scanner.nextLine();
+            System.out.print("Enter the name of item " + (i + 1) + ": ");
+            String name = scanner.nextLine();
+
+            // Ask for purchases inside do/while loop to validate. 
             int purchase = 0;
             do {
                 // Prompts with index correction
@@ -34,6 +44,13 @@ public class CafeteriaMenuAnalysis {
                     System.out.println("Error: Number of purchases must be greater than zero.");
                 }
             } while (purchase <= 0);
+
+            // Ask for price - one input, no need for do/while unless you want to validate price too.
+            System.out.print("Enter price for " + name + ": ");
+            double price = scanner.nextDouble();
+
+            // Now create your MenuItems object and store it
+            menuItems[i] = new MenuItems(name, purchase, price);
 
             purchases[i] = purchase;
             totalPurchases += purchase;
