@@ -66,10 +66,14 @@ public class CafeteriaMenuAnalysis {
             demandLevel = "High Demand";
         }
 
-    
-
         // 4️⃣ OUTPUT
+        // Output the results
+        System.out.println("Average purchases = " + averagePurchases);
+        System.out.println("Most popular item  = Item " + mostPopularItem);
+        System.out.println("Least popular item  = Item " + leastPopularItem);
+        System.out.println("Femand is " + demandLevel);
 
+        scanner.close();
 
     } // end of main method
 } // end of class
