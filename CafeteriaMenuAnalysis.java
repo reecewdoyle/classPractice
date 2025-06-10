@@ -21,9 +21,7 @@ public class CafeteriaMenuAnalysis {
         int[] purchases = new int [numMenuItems];
         MenuItems[] menuItems = new MenuItems[numMenuItems];
         int totalPurchases = 0;
-
         
-
         // Input the number of purchases for each menu item
         // Loop through menu items
         for (int i = 0; i < numMenuItems; i++) {
@@ -120,8 +118,6 @@ public class CafeteriaMenuAnalysis {
         System.out.println("Demand is " + demandLevel);
         System.out.println("Total cafeteria bill = $" + String.format("%.2f", totalBill));
         System.out.println(itemSubtotalsOutput);
-        
         scanner.close();
-
     } // end of main method
 } // end of class
