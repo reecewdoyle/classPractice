@@ -120,11 +120,7 @@ public class CafeteriaMenuAnalysis {
         System.out.println("Demand is " + demandLevel);
         System.out.println("Total cafeteria bill = $" + String.format("%.2f", totalBill));
         System.out.println(itemSubtotalsOutput);
-
-
         
-        
-
         scanner.close();
 
     } // end of main method
